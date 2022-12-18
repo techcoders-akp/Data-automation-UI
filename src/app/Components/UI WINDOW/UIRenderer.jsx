@@ -2,9 +2,9 @@
 const UIRenderer = () => {
   return (
     <>
-    <h1>Priyesh Was Here</h1>
+      <h1>Priyesh Was Here</h1>
     </>
-  )
-}
+  );
+};
 
-export default UIRenderer
+export default UIRenderer;
