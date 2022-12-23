@@ -1,10 +1,17 @@
+import SearchIcon from '@mui/icons-material/Search';
+import { Chip } from '@mui/material';
+import TextField from "@mui/material/TextField";
+import Header from '../Header'
+import SideNavbar from '../sideNav/SideNavbar'
 
 const UIRenderer = () => {
   return (
-    <>
-      <h1>Priyesh Was Here</h1>
-    </>
-  );
-};
+  <>
+  <SideNavbar/>
+  <Header/>
+  </>
+    
+  )
+}
 
 export default UIRenderer;
