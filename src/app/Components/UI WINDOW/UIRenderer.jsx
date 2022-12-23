@@ -1,32 +1,16 @@
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import SearchIcon from '@mui/icons-material/Search';
 import { Chip } from '@mui/material';
 import TextField from "@mui/material/TextField";
+import Header from '../Header'
+import SideNavbar from '../sideNav/SideNavbar'
 
 const UIRenderer = () => {
   return (
-    // 
-    <>
-    <div className='flexColumn' >
-      <button className='flexButton'><AccountBalanceIcon/></button>
-      <button className='flexButton1'><AccountBalanceIcon/></button>
-      <button className='flexButton1'><AccountBalanceIcon/></button>
-      <button className='flexButton1'><AccountBalanceIcon/></button>
-      <button className='flexButton1'><AccountBalanceIcon/></button>
+  <>
+  <SideNavbar/>
+  <Header/>
+  </>
     
-
-    </div>
-
-    <div class="navbar">
-        <button className='flexButton2'><AccountBalanceIcon/></button>
-        <button className='flexButton2'><AccountBalanceIcon/></button>
-        <button className='flexButton2'><AccountBalanceIcon/></button>
-        <button className='flexButton3'><SearchIcon/></button>
-
-
-</div>
-<h1>Automation</h1>
-    </>
   )
 }
 
