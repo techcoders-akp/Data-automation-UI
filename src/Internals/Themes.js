@@ -1,21 +1,29 @@
 import { createTheme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-import { red } from '@mui/material/colors';
 
-
-const theme = createTheme({
-    palette: {
-        primary: {
-          main: red[500],
-        },
-      },
+const themeLight = createTheme({
+  palette: {
+    background: {
+      default: "#f8f9fa",
+      white :"#ffff",
+      darkBlue:"rgb(52, 71, 103)",
+      onHover:'#1976d21c'
+    },
+    buttons:{
+      primary:'#007fff'
+    },
+  }
   });
 
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      color: theme.palette.primary.main,
+  const themeDark = createTheme({
+    palette: {
+      background: {
+        default: "#007fff"
+      },
+      text: {
+        primary: "#ffffff"
+      }
     }
-  }));
+  });
 
 
-  export {theme , useStyles} ;
+  export {themeLight , themeDark} ;
