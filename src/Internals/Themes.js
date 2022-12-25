@@ -6,10 +6,12 @@ const themeLight = createTheme({
       default: "#f8f9fa",
       white :"#ffff",
       darkBlue:"rgb(52, 71, 103)",
-      onHover:'#1976d21c'
+      onHover:'#1976d21c',
+      tempWhite:'#ffff'
     },
     buttons:{
-      primary:'#007fff'
+      primary:'#007fff',
+      yellow:"#ffeb3b",
     },
   }
   });
@@ -17,11 +19,16 @@ const themeLight = createTheme({
   const themeDark = createTheme({
     palette: {
       background: {
-        default: "#007fff"
+        default: "#161C24",
+        white :"#2d364e",
+        darkBlue:"rgb(52, 71, 103)",
+        onHover:'#1976d21c' ,
+        tempWhite:'#ffff'
       },
-      text: {
-        primary: "#ffffff"
-      }
+      buttons:{
+        primary:'#007fff',
+        yellow:"#ffeb3b",
+      },
     }
   });
 

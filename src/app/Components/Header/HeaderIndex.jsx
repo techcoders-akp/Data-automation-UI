@@ -13,14 +13,17 @@ import TextField from '@mui/material/TextField';
 
 import Avatarsrc from '../../Icons/Avatar.jpg';
 
-const HeaderIndex = () => {
+const HeaderIndex = (props) => {
+  const {handleMode , mode} = props ;
   const classes = HeaderStyles();
 
-  const [toggleMode, settoggleMode] = React.useState(true);
   const [toggleSearch, settoggleSearch] = React.useState(false)
 
-  const handleMode = () => {
-    toggleMode ? settoggleMode(false) : settoggleMode(true);
+  const handleDarkMode = () => {
+    if(mode)
+    handleMode(false);
+    else 
+    handleMode(true)
   };
 
   React.useEffect(() => {
@@ -60,8 +63,8 @@ const HeaderIndex = () => {
            {!toggleSearch ? <SearchIcon  className={classes.Icons}/> : <ClearIcon className={classes.Icons}/> } 
           </IconButton>
 
-          <IconButton onClick={handleMode}>
-            {toggleMode ? <WbSunnyOutlinedIcon  /> : <DarkModeIcon />}
+          <IconButton onClick={handleDarkMode}>
+            {mode ? <WbSunnyOutlinedIcon className={classes.sun} /> : <DarkModeIcon className={classes.moon}/>}
           </IconButton>
 
           <IconButton>

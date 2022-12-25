@@ -9,9 +9,9 @@ const App = () => {
 const [toggleMode, settoggleMode] = React.useState(true)
   return (
     <>
-      <ThemeProvider theme={toggleMode ? themeLight : themeDark}>
+      <ThemeProvider theme={!toggleMode ? themeLight : themeDark}>
       <CssBaseline />
-      <UIRenderer/>
+      <UIRenderer handleMode={settoggleMode} mode={toggleMode}/>
       </ThemeProvider>
     </>
   )

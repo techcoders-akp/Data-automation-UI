@@ -9,7 +9,7 @@ export const HeaderStyles = makeStyles( theme  => ({
         backgroundColor:theme.palette.background.white,
         display:'flex',
         justifyContent:'flex-end',
-        minHeight:'3.55rem',
+        minHeight:'3.395rem',
     },
     flexEndDiv:{
         maxWidth:'30%',
@@ -32,6 +32,12 @@ export const HeaderStyles = makeStyles( theme  => ({
     },
     notificationIcon:{
         color:theme.palette.background.darkBlue,
-    }
+    },
+    moon:{
+        color:theme.palette.buttons.primary
+    },
+    sun:{
+        color:theme.palette.buttons.yellow,
+    },
 }));
 

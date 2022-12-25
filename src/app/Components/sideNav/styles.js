@@ -44,6 +44,6 @@ export const sideNavBarStyles = makeStyles( theme  => ({
 
   },
   brandLogo:{
-    color:theme.palette.background.white
+    color:theme.palette.background.tempWhite
   },
 }));
