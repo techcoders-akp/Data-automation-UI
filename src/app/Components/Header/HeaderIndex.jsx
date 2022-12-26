@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HeaderStyles } from './styles';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
@@ -13,19 +13,21 @@ import TextField from '@mui/material/TextField';
 
 import Avatarsrc from '../../Icons/Avatar.jpg';
 
-const HeaderIndex = (props) => {
-  const {handleMode , mode} = props ;
+const HeaderIndex = () => {
   const classes = HeaderStyles();
 
+  const [toggleMode, settoggleMode] = React.useState(true);
   const [toggleSearch, settoggleSearch] = React.useState(false)
+  const [searchInput, setSearchInput]= useState('')
 
-  const handleDarkMode = () => {
-    if(mode)
-    handleMode(false);
-    else 
-    handleMode(true)
+  const handleMode = () => {
+    toggleMode ? settoggleMode(false) : settoggleMode(true);
   };
-
+  const cleanSearch = () =>setSearchInput('')
+  
+  const onChange=(event)=>{
+    setSearchInput(event.target.value)
+  }
   React.useEffect(() => {
     if(toggleSearch)
     setTimeout(() => {
@@ -47,6 +49,9 @@ const HeaderIndex = (props) => {
         fullWidth
         size="small"
         margin="dense"
+        onChange={onChange}
+        value={searchInput}
+        onBlur={cleanSearch}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -63,8 +68,8 @@ const HeaderIndex = (props) => {
            {!toggleSearch ? <SearchIcon  className={classes.Icons}/> : <ClearIcon className={classes.Icons}/> } 
           </IconButton>
 
-          <IconButton onClick={handleDarkMode}>
-            {mode ? <WbSunnyOutlinedIcon className={classes.sun} /> : <DarkModeIcon className={classes.moon}/>}
+          <IconButton onClick={handleMode}>
+            {toggleMode ? <WbSunnyOutlinedIcon  /> : <DarkModeIcon />}
           </IconButton>
 
           <IconButton>
