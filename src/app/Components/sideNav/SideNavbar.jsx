@@ -18,8 +18,8 @@ const SideNavbar = () => {
       </div>
 
       <div className={classes.dynamicIconsDiv}>
-        {sideIcons.map((item) => {
-          if(item.id<5){
+        {sideIcons.filter(sideIcons=>sideIcons.id<5).map((item) => {
+          
             return (
             <Tooltip
               title={item.Name}
@@ -32,12 +32,12 @@ const SideNavbar = () => {
               </Button>
             </Tooltip>
           );
-         } })}
+         } )}
       </div>
 
       <div className={classes.footerContent}>
-      {sideIcons.map((item) => {
-          if(item.id>4){
+      {sideIcons.filter(sideIcons=>sideIcons.id>4).map((item) => {
+         
             return (
             <Tooltip
               title={item.Name}
@@ -50,7 +50,7 @@ const SideNavbar = () => {
               </Button>
             </Tooltip>
           );
-         } })}
+          })}
       </div>
     </div>
   );
