@@ -27,19 +27,24 @@ const HeaderIndex = (props) => {
     handleMode(true)
   };
   const cleanSearch = () =>setSearchInput('')
-  
+  const onSearchIconClick=()=>{
+    
+    settoggleSearch(prev => !prev);
+    cleanSearch();
+
+  }
   const onChange=(event)=>{
     setSearchInput(event.target.value)
   }
   React.useEffect(() => {
-    if(toggleSearch)
     setTimeout(() => {
-      if(toggleSearch)
+      if(searchInput.length === 0)
       {
         settoggleSearch(false)
       }
     }, 10000);
-  })
+  },[searchInput.length])
+
 
   return (
     <>
@@ -67,7 +72,7 @@ const HeaderIndex = (props) => {
       }
       </div>
         <div className={classes.flexEndDiv}>
-          <IconButton onClick={() => settoggleSearch(prev => !prev)}>
+          <IconButton onClick={onSearchIconClick}>
            {!toggleSearch ? <SearchIcon  className={classes.Icons}/> : <ClearIcon className={classes.Icons}/> } 
           </IconButton>
 
