@@ -33,7 +33,7 @@ export const sideNavBarStyles = makeStyles( theme  => ({
     maxHeight:'2rem',
     
     '&:hover':{
-      backgroundColor:`${theme.palette.background.onHover} !important`,
+      backgroundColor:`${theme.palette.buttons.onHover} !important`,
     }
   },
   footerContent: {
@@ -44,6 +44,6 @@ export const sideNavBarStyles = makeStyles( theme  => ({
 
   },
   brandLogo:{
-    color:theme.palette.background.tempWhite
+    color:theme.palette.icons.White
   },
 }));

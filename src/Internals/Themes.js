@@ -4,7 +4,8 @@ const themeLight = createTheme({
   palette: {
     background: {
       default: "#f8f9fa",
-      white :"#ffff"
+      white :"#ffff",
+      darkBlue:"rgb(52, 71, 103)",
     },
     buttons:{
       primary:'#007fff',
@@ -12,9 +13,8 @@ const themeLight = createTheme({
       onHover:'#1976d21c'
     },
     icons:{
-      darkBlue:"rgb(52, 71, 103)",
-      tempWhite:'#ffff'
-      
+      Blue:"rgb(52, 71, 103)",
+      White:'#ffff'
     }
   }
   });
@@ -23,7 +23,9 @@ const themeLight = createTheme({
     palette: {
       background: {
         default: "#161C24",
-        white :"#2d364e"
+        white :"#2d364e",
+        darkBlue:"rgb(52, 71, 103)",
+
       },
       buttons:{
         primary:'#007fff',
@@ -32,7 +34,7 @@ const themeLight = createTheme({
       },
       icons:{
         darkBlue:"rgb(52, 71, 103)",
-        tempWhite:'#ffff'
+        White:'#ffff'
       }
     }
   });
