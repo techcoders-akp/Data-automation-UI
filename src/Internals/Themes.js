@@ -15,6 +15,9 @@ const themeLight = createTheme({
     icons:{
       Blue:"rgb(52, 71, 103)",
       White:'#ffff'
+    },
+    text:{
+      main:'rgb(52, 71, 103)'
     }
   }
   });
@@ -35,6 +38,9 @@ const themeLight = createTheme({
       icons:{
         darkBlue:"rgb(52, 71, 103)",
         White:'#ffff'
+      },
+      text:{
+        main:'#ffff'
       }
     }
   });

@@ -1,7 +1,4 @@
 import { makeStyles } from '@mui/styles';
-import Switch from '@mui/material/Switch';
-import { styled } from '@mui/material/styles';
-
 
 export const HeaderStyles = makeStyles( theme  => ({
     
@@ -9,7 +6,8 @@ export const HeaderStyles = makeStyles( theme  => ({
         backgroundColor:theme.palette.background.white,
         display:'flex',
         justifyContent:'flex-end',
-        minHeight:'3.395rem',
+        // minHeight:'3.395rem',
+        padding:'5px'    
     },
     flexEndDiv:{
         maxWidth:'30%',

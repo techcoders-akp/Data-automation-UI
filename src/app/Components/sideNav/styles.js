@@ -20,7 +20,7 @@ export const sideNavBarStyles = makeStyles( theme  => ({
     display: 'flex',
     justifyContent: 'center',
     backgroundColor:theme.palette.background.darkBlue,
-    height: '9.7%',
+    height: '9%',
     marginTop:'-16px',
   },
   dynamicIconsDiv: {
