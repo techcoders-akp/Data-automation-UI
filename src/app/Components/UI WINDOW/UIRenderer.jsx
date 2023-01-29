@@ -6,7 +6,7 @@ import ScreenLayout from '../../Containers/App Layout/ScreenLayout';
 const UIRenderer = (props) => {
   const {handleMode , mode} = props ;
 
-  const [content, setContent] = React.useState("Info")
+  const [content, setContent] = React.useState("Home")
   const [contentData, setcontentData] = React.useState({})
 
   console.log("UI RENDERER" ,content)
