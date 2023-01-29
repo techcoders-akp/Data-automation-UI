@@ -1,29 +1,35 @@
 import React from "react";
-
+import HomeLayout from "../app/Containers/Home";
+import DatabaseTableLayout from "../app/Containers/Database Table";
+import AdminPanelLayout from "../app/Containers/Admin Panel";
+import ErrorContentLayout from "../app/Containers/Error Content";
+import InfoLayout from "../app/Containers/Info";
+import SettingsLayout from "../app/Containers/Settings";
+import UsersLayout from "../app/Containers/Users";
 
 export const DynamicContentRenderer = (content,contentData) =>{
 
     switch(content)
     {
         case 'Home':
-            return <h1> Home</h1> ;
+            return <HomeLayout/>;
 
         case 'Database Table':
-            return <h1> Database Table </h1> ;
+            return <DatabaseTableLayout/> ;
 
         case 'Users':
-            return <h1> Users</h1> ;
+            return <UsersLayout/> ;
 
         case 'Admin Panel':
-            return <h1> Admin Panel</h1> ;
+            return <AdminPanelLayout/> ;
 
         case 'Settings':
-            return <h1> Settings</h1> ;
+            return <SettingsLayout/> ;
 
         case 'Info':
-            return <h1> Info</h1> ;
+            return <InfoLayout/> ;
 
          default :
-            return <h1>Error Content </h1>;   
+            return <ErrorContentLayout/>;   
     }
 }
