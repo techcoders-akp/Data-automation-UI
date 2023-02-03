@@ -7,7 +7,7 @@ const statistics=[
         "id":1,
         "name":"Today's Money",
         "amount": "$53,000",
-        "rate":"55%",
+        "rate":"+55%",
         "p&l":1,
         "icon":<MonetizationOnIcon/>
     },

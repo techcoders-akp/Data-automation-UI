@@ -11,7 +11,8 @@ export const screenLayoutStyles = makeStyles( theme  => ({
         overflowY:'scroll',
         overflowX:'hidden',
         padding:'2px',
-        color:theme.palette.text.main
+        color:theme.palette.text.main,
+        boxSizing:'border-box',
     },
     container:{
 

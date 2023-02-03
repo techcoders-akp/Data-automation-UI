@@ -56,7 +56,6 @@ const HeaderIndex = (props) => {
         placeholder='Search here ..'
         fullWidth
         size="small"
-        margin="dense"
         onChange={onChange}
         value={searchInput}
         onBlur={cleanSearch}

@@ -1,20 +1,24 @@
 import React, { useEffect } from 'react';
 
 import { screenLayoutStyles } from './Styles';
-import { DynamicContentRenderer } from '../../../Internals/Router';
+import { DynamicContentRenderer as getDynamicContent} from '../../../Internals/Router';
 
 const ScreenLayout = (props) => {
-  const { content, contentData } = props;
+  const classes = screenLayoutStyles();
 
+  const { content, contentData } = props;
 
   console.log('SCREEN LAYOUT', content);
 
-  const classes = screenLayoutStyles();
+  const DynamicContentRenderer = () => {
+    return getDynamicContent(content, contentData);
+  };
+
   return (
     <>
       <section className={classes.root}>
         <div className={classes.container}>
-          {DynamicContentRenderer(content, contentData)}
+          <DynamicContentRenderer />
         </div>
       </section>
     </>

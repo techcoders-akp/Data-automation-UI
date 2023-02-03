@@ -1,24 +1,32 @@
 import React, { useEffect } from 'react';
-import SideNavbar from '../sideNav/SideNavbar'
-import HeaderIndex from '../Header/HeaderIndex'
-import ScreenLayout from '../../Containers/App Layout/ScreenLayout';
+import SideNavbar from '../sideNav/SideNavbar';
+import HeaderIndex from '../Header/HeaderIndex';
+import LogInComponent from '../../Containers/Authentication/LogIn/Index';
+import ScreenLayout from '../../Containers/AppLayout/ScreenLayout';
 
 const UIRenderer = (props) => {
-  const {handleMode , mode} = props ;
+  const { handleMode, mode } = props;
 
-  const [content, setContent] = React.useState("Home")
-  const [contentData, setcontentData] = React.useState({})
+  const [content, setContent] = React.useState('Home');
+  const [contentData, setcontentData] = React.useState({});
 
-  console.log("UI RENDERER" ,content)
-  
+  console.log('UI RENDERER', content);
+
+  const auth = false;
+
   return (
-  <>
-  <SideNavbar setContent={setContent} content={content} />
-  <HeaderIndex handleMode={handleMode} mode={mode}/>
-  <ScreenLayout content={content} contentData={contentData} />
-  </>
-    
-  )
-}
+    <>
+      {!auth && (
+        <>
+          <SideNavbar setContent={setContent} content={content} />
+          <HeaderIndex handleMode={handleMode} mode={mode} />
+          <ScreenLayout content={content} contentData={contentData} />
+        </>
+      )}
+      
+      { auth && <LogInComponent /> }
+    </>
+  );
+};
 
 export default UIRenderer;

@@ -25,7 +25,7 @@ const themeLight = createTheme({
   const themeDark = createTheme({
     palette: {
       background: {
-        default: "#161C24",
+        default: "#001E3C",
         white :"#2d364e",
         darkBlue:"rgb(52, 71, 103)",
 
