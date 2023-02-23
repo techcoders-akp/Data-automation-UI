@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useRef } from 'react';
 import { HeaderStyles } from './styles';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
@@ -15,7 +15,10 @@ import Avatarsrc from '../../Icons/Avatar.jpg';
 
 const HeaderIndex = (props) => {
   const {handleMode , mode} = props ;
+
   const classes = HeaderStyles();
+
+  const inputRef = useRef();
 
   const [toggleSearch, settoggleSearch] = React.useState(false)
   const [searchInput, setSearchInput]= useState('')
@@ -28,8 +31,8 @@ const HeaderIndex = (props) => {
   };
   const cleanSearch = () =>setSearchInput('')
   const onSearchIconClick=()=>{
-    
     settoggleSearch(prev => !prev);
+    // inputRef.current.focus();
     cleanSearch();
 
   }
@@ -55,6 +58,7 @@ const HeaderIndex = (props) => {
         id="input-with-icon-textfield"
         placeholder='Search here ..'
         fullWidth
+        ref={inputRef}
         size="small"
         onChange={onChange}
         value={searchInput}

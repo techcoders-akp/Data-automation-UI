@@ -5,5 +5,6 @@ export const TableStyles = makeStyles((theme) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
     // color: theme.palette.text.secondary,
+    // width:'100%',
   },
 }));

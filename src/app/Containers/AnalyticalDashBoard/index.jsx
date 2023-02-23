@@ -6,7 +6,8 @@ const AnalyticalDashBoard = () => {
   return (
     <>
      <Stack spacing={2}>
-      <StatisticsCards/>
+      {/* <StatisticsCards/> */}
+      <h1 sx={{margin:0,padding:0}}>Analytical Dashboard</h1>
       <AnalyticalDashBoardTable/>
      </Stack>
     </>
